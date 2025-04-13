@@ -3,16 +3,36 @@
         <link rel="stylesheet" href="games.css"/>
     </head>
     <body>
+        <a href="javascript:history.back()">⬅ Вернуться назад</a>
         <h1>Minecraft</h1>
         <div class="gallery">
             <div class="gallery_current">
-                <img src="../img/kartina.jfif"/>
+                <img id="mainImage" src="../img/kartina.jfif"/>
             </div>
             <div class="gallery_list">
-                <img src="../img/kartina.jfif">
-                <img src="../img/minecraft.jfif">
-                <img src="../img/images.jfif">
+                <img id="firstImage" class="active" onclick="clickImage(event)" src="../img/kartina.jfif">
+                <img onclick="clickImage(event)" src="../img/minecraft.jfif">
+                <img onclick="clickImage(event)" src="../img/images.jfif">
+                <img onclick="clickImage(event)" src="../img/kartina.jfif">
+                <img onclick="clickImage(event)" src="../img/kartina.jfif">
             </div>
         </div>
     </body>
+    <footer>
+        <script>
+            var lastImageClicked = document.getElementById('firstImage')
+            function clickImage(event) {
+                const target = event.target
+                const mainImage = document.getElementById('mainImage')
+
+                const newImageURL = target.getAttribute('src')
+
+                mainImage.setAttribute('src', newImageURL)
+
+                lastImageClicked.classList.remove('active')
+                target.classList.add('active')
+                lastImageClicked = target
+            }
+        </script>
+    </footer>
 </html>
