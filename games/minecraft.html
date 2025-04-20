@@ -5,19 +5,40 @@
     <body>
         <a href="javascript:history.back()">⬅ Вернуться назад</a>
         <h1>Minecraft</h1>
-        <div class="gallery">
-            <div class="gallery_current">
-                <img id="mainImage" src="../img/kartina.jfif"/>
+        <div class="header_container">
+            <div class="header_info">
+                <div class="header_info_top">
+                    <div class="game_box_art">
+                        <img src="../img/minn.jfif"/>
+                    </div>
+                    <div class="game_brief_description">
+                        <h1>Майнкрафт - это игра.</h1>
+                        <h3>Год выхода: 2009</h3>
+                        <h3>Разработчик: Mojang</h3>
+                        <div class="pay_button">
+                            <img src="../img/images.png"/>
+                            <h3>Оплатить - $99.99</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery_list">
-                <img id="firstImage" class="active" onclick="clickImage(event)" src="../img/kartina.jfif">
-                <img onclick="clickImage(event)" src="../img/minecraft.jfif">
-                <img onclick="clickImage(event)" src="../img/images.jfif">
-                <img onclick="clickImage(event)" src="../img/kartina.jfif">
-                <img onclick="clickImage(event)" src="../img/kartina.jfif">
+            <div class="header_info_bottom">
+                
             </div>
-        </div>
-    </body>
+            <div class="gallery">
+                <div class="gallery_current">
+                    <img id="mainImage" src="../img/kartina.jfif"/>
+                </div>
+                <div class="gallery_list">
+                    <img id="firstImage" class="active" onclick="clickImage(event)" src="../img/kartina.jfif">
+                    <img onclick="clickImage(event)" src="../img/minecraft.jfif">
+                    <img onclick="clickImage(event)" src="../img/images.jfif">
+                    <img onclick="clickImage(event)" src="../img/kartina.jfif">
+                    <img onclick="clickImage(event)" src="../img/kartina.jfif">
+                </div>
+            </div>
+        </body>
+    </div>
     <footer>
         <script>
             var lastImageClicked = document.getElementById('firstImage')
