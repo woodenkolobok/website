@@ -21,10 +21,24 @@
                         </div>
                     </div>
                 </div>
+                <div class="header_info_bottom">
+                    <div class="tabs_group">
+                        <div class="tab_active" id="firstActiveTab" onclick="clickTab(event)" data-tab-id="tab_description">Описание</div>
+                        <div onclick="clickTab(event)" data-tab-id="tab_system">Системные требования</div>
+                    </div>
+                        <div id="tab_description">
+                            <p>Майнкрафт</p>
+                        </div>
+                        <div id="tab_system" class="invisible">
+                            <p>Операционная система: Windows 12</p>
+                            <p>Процессор: Motorala 6800/Intel Core i11 21900k</p>
+                            <p>Видео карта: 3д ускоритель Voodoo</p>
+                            <p>Оперативная память: не менее 2 килобайт</p>
+                            <p>Место: 20 йобибайтов</p>
+                        </div>
+                </div>
             </div>
-            <div class="header_info_bottom">
-                
-            </div>
+            
             <div class="gallery">
                 <div class="gallery_current">
                     <img id="mainImage" src="../img/kartina.jfif"/>
@@ -40,20 +54,7 @@
         </body>
     </div>
     <footer>
-        <script>
-            var lastImageClicked = document.getElementById('firstImage')
-            function clickImage(event) {
-                const target = event.target
-                const mainImage = document.getElementById('mainImage')
-
-                const newImageURL = target.getAttribute('src')
-
-                mainImage.setAttribute('src', newImageURL)
-
-                lastImageClicked.classList.remove('active')
-                target.classList.add('active')
-                lastImageClicked = target
-            }
-        </script>
+        <script src="../.js/galery.js"></script>
+        <script src="../.js/tabs.js"></script>
     </footer>
 </html>
